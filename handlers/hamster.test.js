@@ -5,9 +5,9 @@ const hamsters = require('../lib/data/hamsters')
 
 jest.unmock('./hamster')
 
-test('should fail so we can test out codepipeline', () => {
-  expect(1).toBe(2)
-})
+// test('should fail so we can test out codepipeline', () => {
+//   expect(1).toBe(2)
+// })
 
 test('gets a hamster with the id parameter', async () => {
   const testId = 'testid'
