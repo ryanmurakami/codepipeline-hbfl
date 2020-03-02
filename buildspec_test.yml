@@ -1,0 +1,21 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 12
+    commands:
+      - echo Installing test runner...
+      - npm i jest-cli
+  build:
+    commands:
+      - echo Running tests...
+      - echo Tests started on `date`
+      - npm test
+  post_build:
+    commands:
+      - echo Tests completed on `date`
+
+cache:
+  paths:
+    - '/root/.npm/**/*'
